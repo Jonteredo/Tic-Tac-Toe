@@ -16,7 +16,11 @@ namespace Tic_Tac_Toe
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        KeyboardState state = Keyboard.GetState();
+
         private Texture2D playboard;
+        private Texture2D x;
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
@@ -47,6 +51,8 @@ namespace Tic_Tac_Toe
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             playboard = Content.Load<Texture2D>("playboard");
+            x = Content.Load<Texture2D>("x");
+
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
@@ -88,7 +94,11 @@ namespace Tic_Tac_Toe
 
             spriteBatch.Begin();
 
+            //Playboard (Täcker hela window)
             spriteBatch.Draw(playboard, new Rectangle(0, 0, 800, 480), Color.White);
+
+            // X på playboard (Täcker en liten rektangel)
+            spriteBatch.Draw(x, new Rectangle(360, 200, 80, 80), Color.White);
 
             spriteBatch.End();
 
