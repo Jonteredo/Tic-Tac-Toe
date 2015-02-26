@@ -16,6 +16,7 @@ namespace Tic_Tac_Toe
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        private Texture2D playboard;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
@@ -45,6 +46,7 @@ namespace Tic_Tac_Toe
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
+            playboard = Content.Load<Texture2D>("playboard");
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
@@ -81,7 +83,14 @@ namespace Tic_Tac_Toe
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
+
             GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            spriteBatch.Begin();
+
+            spriteBatch.Draw(playboard, new Rectangle(0, 0, 800, 480), Color.White);
+
+            spriteBatch.End();
 
             // TODO: Add your drawing code here
 
