@@ -7,6 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>C:\Users\IvDi2101\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\bin\x86\Debug\Content\playboard.xnb</Output>
       <Time>2015-02-26T13:30:43.7018435+01:00</Time>
     </Item>
@@ -18,6 +19,19 @@
       <Options>None</Options>
       <Output>C:\Users\IvDi2101\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\bin\x86\Debug\Content\x.xnb</Output>
       <Time>2015-02-26T14:06:00.2199151+01:00</Time>
+=======
+      <Output>C:\Users\Jonathan Holm\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\bin\x86\Debug\Content\playboard.xnb</Output>
+      <Time>2015-02-26T14:04:30.2672541+01:00</Time>
+    </Item>
+    <Item>
+      <Source>cirkel.png</Source>
+      <Name>cirkel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonathan Holm\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\bin\x86\Debug\Content\cirkel.xnb</Output>
+      <Time>2015-02-26T13:56:46.8687492+01:00</Time>
+>>>>>>> origin/master
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

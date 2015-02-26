@@ -94,10 +94,10 @@ namespace Tic_Tac_Toe
 
             spriteBatch.Begin();
 
-            //Playboard (Täcker hela window)
+            //Playboard
             spriteBatch.Draw(playboard, new Rectangle(0, 0, 800, 480), Color.White);
 
-            // X på playboard (Täcker en liten rektangel)
+            // X på playboard
             spriteBatch.Draw(x, new Rectangle(360, 200, 80, 80), Color.White);
 
             spriteBatch.End();
