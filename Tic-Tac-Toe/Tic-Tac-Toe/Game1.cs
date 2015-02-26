@@ -17,8 +17,10 @@ namespace Tic_Tac_Toe
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         private Texture2D playboard;
+        private Texture2D cirkel;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Rectangle cirkelCoords;
 
         public Game1()
         {
@@ -36,6 +38,8 @@ namespace Tic_Tac_Toe
         {
             // TODO: Add your initialization logic here
 
+            this.cirkelCoords = new Rectangle(325, 165, 150, 150);
+
             base.Initialize();
         }
 
@@ -47,6 +51,7 @@ namespace Tic_Tac_Toe
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             playboard = Content.Load<Texture2D>("playboard");
+            cirkel = Content.Load<Texture2D>("cirkel");
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
@@ -73,6 +78,40 @@ namespace Tic_Tac_Toe
                 this.Exit();
 
             // TODO: Add your update logic here
+            KeyboardState keyboardState = Keyboard.GetState();
+
+            if (this.cirkelCoords.X <= 800)
+            {
+                if (keyboardState.IsKeyDown(Keys.Right))
+                    this.cirkelCoords.X += 5;
+                if (keyboardState.IsKeyDown(Keys.Left))
+                    this.cirkelCoords.X -= 5;
+            }
+
+            if (cirkelCoords.Y <= 640 - 160)
+            {
+                if (keyboardState.IsKeyDown(Keys.Down))
+                    this.cirkelCoords.Y += 5;
+                if (keyboardState.IsKeyDown(Keys.Up))
+                    this.cirkelCoords.Y -= 5;
+            }
+
+            if (cirkelCoords.X < 0)
+            {
+                cirkelCoords.X = 0;
+            }
+            if (cirkelCoords.X > 800)
+            {
+                cirkelCoords.X = 800;
+            }
+            if (cirkelCoords.Y < 0)
+            {
+                cirkelCoords.Y = 0;
+            }
+            if (cirkelCoords.Y > 800)
+            {
+                cirkelCoords.Y = 800;
+            }
 
             base.Update(gameTime);
         }
@@ -89,10 +128,9 @@ namespace Tic_Tac_Toe
             spriteBatch.Begin();
 
             spriteBatch.Draw(playboard, new Rectangle(0, 0, 800, 480), Color.White);
+            spriteBatch.Draw(cirkel, this.cirkelCoords, Color.White);
 
             spriteBatch.End();
-
-            // TODO: Add your drawing code here
 
             base.Draw(gameTime);
         }
