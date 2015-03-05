@@ -1,3 +1,0 @@
-Content\cirkel.xnb
-Content\playboard.xnb
-Content\x.xnb
