@@ -26,7 +26,11 @@ namespace Tic_Tac_Toe
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            this.IsMouseVisible = true;
+
+            /* Default Game settings */
+            IsMouseVisible = true;
+            graphics.PreferredBackBufferWidth = 1000;
+            graphics.PreferredBackBufferHeight = 1200;
         }
 
         /// <summary>
@@ -52,8 +56,7 @@ namespace Tic_Tac_Toe
             
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            playBoard = new PlayBoard(Content.Load<Texture2D>("playboard"), new Vector2(Window.ClientBounds.Width, Window.ClientBounds.Height));
+            playBoard = new PlayBoard(Content.Load<Texture2D>("playboard"), new Vector2(Window.ClientBounds.Width, Window.ClientBounds.Height - 200));
 
 
             // TODO: use this.Content to load your game content here
@@ -79,6 +82,7 @@ namespace Tic_Tac_Toe
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            playBoard.update(Window);
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -91,7 +95,7 @@ namespace Tic_Tac_Toe
         protected override void Draw(GameTime gameTime)
         {
 
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
 
             spriteBatch.Begin();
 

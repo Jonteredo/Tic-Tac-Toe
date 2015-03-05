@@ -9,6 +9,9 @@ namespace Tic_Tac_Toe
 {
     public abstract class Mark: TicTacToeObject
     {
+        /// <summary>
+        /// The Mark types
+        /// </summary>
         public enum Type {
             CIRCLE,
             CROSS
@@ -16,6 +19,12 @@ namespace Tic_Tac_Toe
 
         private Type type;
 
+        /// <summary>
+        /// Creates a new Mark object
+        /// </summary>
+        /// <param name="type">The type of the mark</param>
+        /// <param name="texture">The texture to use as the mark</param>
+        /// <param name="pos">The position of the Mark</param>
         public Mark(Type type, Texture2D texture, Vector2 pos): base(texture, pos) {
             this.type = type;
         }
