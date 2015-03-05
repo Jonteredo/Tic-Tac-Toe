@@ -1,6 +1,3 @@
-Content\playboard.xnb
-<<<<<<< HEAD
-Content\x.xnb
-=======
 Content\cirkel.xnb
->>>>>>> origin/master
+Content\playboard.xnb
+Content\x.xnb

@@ -1,19 +1,8 @@
-C:\Users\Jonathan Holm\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\bin\x86\Debug\Content\playboard.xnb
-C:\Users\Jonathan Holm\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\bin\x86\Debug\Tic-Tac-Toe.exe
-C:\Users\Jonathan Holm\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\bin\x86\Debug\Tic-Tac-Toe.pdb
-C:\Users\Jonathan Holm\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\obj\x86\Debug\Tic-Tac-Toe.csprojResolveAssemblyReference.cache
-C:\Users\Jonathan Holm\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\Jonathan Holm\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\obj\x86\Debug\Tic-Tac-Toe.exe
-C:\Users\Jonathan Holm\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\obj\x86\Debug\Tic-Tac-Toe.pdb
-<<<<<<< HEAD
-C:\Users\IvDi2101\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\bin\x86\Debug\Content\playboard.xnb
-C:\Users\IvDi2101\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\bin\x86\Debug\Tic-Tac-Toe.exe
-C:\Users\IvDi2101\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\bin\x86\Debug\Tic-Tac-Toe.pdb
-C:\Users\IvDi2101\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\obj\x86\Debug\Tic-Tac-Toe.csprojResolveAssemblyReference.cache
-C:\Users\IvDi2101\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\IvDi2101\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\obj\x86\Debug\Tic-Tac-Toe.exe
-C:\Users\IvDi2101\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\obj\x86\Debug\Tic-Tac-Toe.pdb
-C:\Users\IvDi2101\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\bin\x86\Debug\Content\x.xnb
-=======
-C:\Users\Jonathan Holm\Desktop\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\bin\x86\Debug\Content\cirkel.xnb
->>>>>>> origin/master
+\\vmware-host\Shared Folders\Documents\Visual Studio 2012\Projects\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\bin\x86\Debug\Content\cirkel.xnb
+\\vmware-host\Shared Folders\Documents\Visual Studio 2012\Projects\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\bin\x86\Debug\Content\playboard.xnb
+\\vmware-host\Shared Folders\Documents\Visual Studio 2012\Projects\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\bin\x86\Debug\Content\x.xnb
+\\vmware-host\Shared Folders\Documents\Visual Studio 2012\Projects\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\bin\x86\Debug\Tic-Tac-Toe.exe
+\\vmware-host\Shared Folders\Documents\Visual Studio 2012\Projects\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\bin\x86\Debug\Tic-Tac-Toe.pdb
+\\vmware-host\Shared Folders\Documents\Visual Studio 2012\Projects\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+\\vmware-host\Shared Folders\Documents\Visual Studio 2012\Projects\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\obj\x86\Debug\Tic-Tac-Toe.exe
+\\vmware-host\Shared Folders\Documents\Visual Studio 2012\Projects\Tic-Tac-Toe\Tic-Tac-Toe\Tic-Tac-Toe\obj\x86\Debug\Tic-Tac-Toe.pdb
