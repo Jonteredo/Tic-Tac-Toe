@@ -34,7 +34,7 @@ namespace Tic_Tac_Toe
         /// Updates the marker
         /// </summary>
         /// <param name="window"></param>
-        public void update(GameWindow window) {
+        public virtual void update(GameWindow window) {
             //TODO: Test om musen har blivit klickad och testa med att placera en Mark
         }
 

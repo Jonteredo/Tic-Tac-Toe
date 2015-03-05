@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Tic_Tac_Toe
 {
-    public abstract class Mark: TicTacToeObject
+    public class Mark: TicTacToeObject
     {
         /// <summary>
         /// The Mark types
