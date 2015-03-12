@@ -88,5 +88,9 @@ namespace Tic_Tac_Toe
         /// </summary>
         public Vector2 Size { get { return size; } }
 
+        /// <summary>
+        /// Getter for the activeMarker
+        /// </summary>
+        public int ActiveMarker { get { return activeMarker; } }
     }
 }

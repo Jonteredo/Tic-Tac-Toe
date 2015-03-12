@@ -19,6 +19,9 @@ namespace Tic_Tac_Toe
 
         public static PlayBoard playBoard;
 
+        public Marker marker;
+        public Marker marker2;
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
@@ -57,7 +60,10 @@ namespace Tic_Tac_Toe
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
             playBoard = new PlayBoard(Content.Load<Texture2D>("playboard"), new Vector2(Window.ClientBounds.Width, Window.ClientBounds.Height - 100));
+            marker = new MarkerPlayer("Gustaf", Mark.Type.CROSS, Content.Load<Texture2D>("x"));
+            marker2 = new MarkerPlayer("Jesper", Mark.Type.CIRCLE, Content.Load<Texture2D>("cirkel"));
 
+            playBoard.addMarkers(marker, marker2);
 
             // TODO: use this.Content to load your game content here
         }
