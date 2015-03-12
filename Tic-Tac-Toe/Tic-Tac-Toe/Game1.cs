@@ -29,8 +29,8 @@ namespace Tic_Tac_Toe
 
             /* Default Game settings */
             IsMouseVisible = true;
-            graphics.PreferredBackBufferWidth = 1000;
-            graphics.PreferredBackBufferHeight = 1200;
+            graphics.PreferredBackBufferWidth = 500;
+            graphics.PreferredBackBufferHeight = 600;
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Tic_Tac_Toe
             
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            playBoard = new PlayBoard(Content.Load<Texture2D>("playboard"), new Vector2(Window.ClientBounds.Width, Window.ClientBounds.Height - 200));
+            playBoard = new PlayBoard(Content.Load<Texture2D>("playboard"), new Vector2(Window.ClientBounds.Width, Window.ClientBounds.Height - 100));
 
 
             // TODO: use this.Content to load your game content here
