@@ -49,5 +49,15 @@ namespace Tic_Tac_Toe
         /// Getter for the texture of the marker
         /// </summary>
         public Texture2D MarkTexture { get { return markTexture; } }
+
+        /// <summary>
+        /// Getter for the name
+        /// </summary>
+        public String Name { get { return name; } }
+
+        /// <summary>
+        /// Getter for the type
+        /// </summary>
+        public Mark.Type Type { get { return type; } }
     }
 }
