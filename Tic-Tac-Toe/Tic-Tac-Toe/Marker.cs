@@ -40,7 +40,14 @@ namespace Tic_Tac_Toe
         /// <param name="window"></param>
         public abstract void update(GameWindow window);
 
+        /// <summary>
+        /// Getter for the id
+        /// </summary>
         public int ID { get { return id; } set { id = value; } }
 
+        /// <summary>
+        /// Getter for the texture of the marker
+        /// </summary>
+        public Texture2D MarkTexture { get { return markTexture; } }
     }
 }
