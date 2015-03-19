@@ -11,7 +11,7 @@ namespace Tic_Tac_Toe
     {
 
         /// <summary>
-        /// 
+        /// Create a super AI (unbeatable)
         /// </summary>
         /// <param name="name"></param>
         /// <param name="type"></param>
@@ -20,6 +20,10 @@ namespace Tic_Tac_Toe
             //Build with the following algoritm http://neverstopbuilding.com/minimax
         }
 
+        /// <summary>
+        /// Make AI move
+        /// </summary>
+        /// <param name="window"></param>
         public override void update(GameWindow window) {
             PlayBoard playBoard = Game1.playBoard;
         }

@@ -10,7 +10,7 @@ namespace Tic_Tac_Toe
     public abstract class Marker
     {
 
-        private int id;
+        private int playerId;
         private String name;
         private Mark.Type type;
         private Texture2D markTexture;
@@ -43,7 +43,7 @@ namespace Tic_Tac_Toe
         /// <summary>
         /// Getter for the id
         /// </summary>
-        public int ID { get { return id; } set { id = value; } }
+        public int PlayerID { get { return playerId; } set { playerId = value; } }
 
         /// <summary>
         /// Getter for the texture of the marker

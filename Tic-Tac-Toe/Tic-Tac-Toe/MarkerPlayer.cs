@@ -12,14 +12,27 @@ namespace Tic_Tac_Toe
     {
         private bool isMousePressed;
 
-        public MarkerPlayer(String name, Mark.Type type, Texture2D markTexture): base(name, type, markTexture) {
+        /// <summary>
+        /// Initialize the player marker
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="type"></param>
+        /// <param name="markTexture"></param>
+        public MarkerPlayer(String name, Mark.Type type, Texture2D markTexture): base(name, type, markTexture)
+        {
             
         }
 
-        public override void update(GameWindow window) {
+        /// <summary>
+        /// Handle click events
+        /// </summary>
+        /// <param name="window"></param>
+        public override void update(GameWindow window)
+        {
             MouseState mouse = Mouse.GetState();
-
-            if (mouse.LeftButton.Equals(ButtonState.Pressed) && !isMousePressed && ID == Game1.playBoard.ActiveMarker) {
+            
+            // 
+            if (mouse.LeftButton.Equals(ButtonState.Pressed) && !isMousePressed && this.PlayerID == Game1.playBoard.ActiveMarker) {
                 isMousePressed = true;
                 tryToMark(mouse.X, mouse.Y);
             }

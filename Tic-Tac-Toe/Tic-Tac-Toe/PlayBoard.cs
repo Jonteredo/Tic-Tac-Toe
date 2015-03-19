@@ -19,7 +19,8 @@ namespace Tic_Tac_Toe
         /// </summary>
         /// <param name="texture">The texture of the board</param>
         /// <param name="size">The size of the board</param>
-        public PlayBoard(Texture2D texture, Vector2 size): base(texture, new Vector2(0,0)) {
+        public PlayBoard(Texture2D texture, Vector2 size): base(texture, new Vector2(0,0))
+        {
             this.size = size;
         }
 
@@ -29,7 +30,8 @@ namespace Tic_Tac_Toe
         /// <param name="marker1"></param>
         /// <param name="marker2"></param>
         /// <returns></returns>
-        public PlayBoard addMarkers(Marker marker1, Marker marker2) {
+        public PlayBoard addMarkers(Marker marker1, Marker marker2)
+        {
             markers[0] = marker1;
             markers[1] = marker2;
             return this;
@@ -39,7 +41,8 @@ namespace Tic_Tac_Toe
         /// Updates the game logic
         /// </summary>
         /// <param name="window"></param>
-        public override void update(GameWindow window) {
+        public override void update(GameWindow window)
+        {
             if (markers[activeMarker] != null) {
                 markers[activeMarker].update(window);
             }
@@ -53,7 +56,8 @@ namespace Tic_Tac_Toe
         {
             spriteBatch.Draw(texture, new Rectangle((int)pos.X, (int)pos.Y, (int)size.X, (int)size.Y), Color.White);
 
-            foreach (var piece in marks) {
+            foreach (var piece in marks)
+            {
                 piece.Value.draw(spriteBatch);
             }
 
@@ -66,22 +70,62 @@ namespace Tic_Tac_Toe
         /// <param name="y">The position in Y, from the top vertecally.</param>
         /// <param name="type">The type of mark to place</param>
         /// <returns>True if it was successful, False if there already is a mark at the position</returns>
-        public bool tryToMark(int x, int y, Mark.Type type) {
-            //TODO: Ta reda på vilken ruta som kordinaterna är i. 
-            //TODO: Testa om det går att lägga till och gör det om det går annars returnera falskt. 
-            //TODO: Ändra vem som spelar om plceringen var lyckad
-            translateCoords(x, y);
+        public bool tryToMark(int x, int y, Mark.Type type)
+        {
+            Vector2 coords = translateCoords(x, y);
 
-            return false;
+            // Spot is taken
+            if (marks.ContainsKey(coords))
+            {
+                return false;
+            }
+
+            // Get the active marker player
+            Marker player = markers[activeMarker];
+
+            Vector2 realCoords = translateToRealCoords((int)coords.X, (int)coords.Y);
+
+            // Add a new mark with correct type and coords
+            marks.Add(coords, new Mark(player.Type, player.MarkTexture, realCoords));
+
+            // Change active marker to the other player
+            activeMarker = (activeMarker == 1) ? 0 : 1;
+
+            return true;
         }
 
-        private Vector2 translateCoords(int x, int y) {
-            int x1 = x / ((int) size.X / 3);
-            int y1 = y / ((int)size.Y / 3);
+        /// <summary>
+        /// Translate grid coords to real coordinates
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        private Vector2 translateToRealCoords(int x, int y)
+        {
+            int realX = x * ((int)size.X / 3) + 10;
+            int realY = y * (((int)size.Y) / 3) + 10;
 
-            Console.WriteLine(x1 + "; " + y1);
+            return new Vector2(realX, realY);
+        }
 
-            return new Vector2();
+        /// <summary>
+        /// Translate real coords to grid coords
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        private Vector2 translateCoords(int x, int y)
+        {
+            int clickX = x / ((int) size.X / 3);
+            int clickY = y / (((int)size.Y) / 3);
+
+            if (clickY > 2)
+            {
+                // Clicked outside of the game area
+                return new Vector2(clickX, 2);
+            }
+
+            return new Vector2(clickX, clickY);
         }
 
         /// <summary>
@@ -90,11 +134,13 @@ namespace Tic_Tac_Toe
         /// <param name="x">The position in X, from the left horizontally</param>
         /// <param name="y">The position in Y, from the top vertecally</param>
         /// <returns>True if there is no mark, False if there is a mark</returns>
-        private bool isEmpty(int x, int y) {
+        private bool isEmpty(int x, int y)
+        {
             return isEmpty(new Vector2(x, y));
         }
 
-        private bool isEmpty(Vector2 vec) {
+        private bool isEmpty(Vector2 vec)
+        {
             if (marks[vec] == null)
             {
                 return true;

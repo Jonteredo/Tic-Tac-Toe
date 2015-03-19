@@ -12,7 +12,8 @@ namespace Tic_Tac_Toe
         /// <summary>
         /// The Mark types
         /// </summary>
-        public enum Type {
+        public enum Type
+        {
             CIRCLE,
             CROSS
         }
@@ -25,8 +26,18 @@ namespace Tic_Tac_Toe
         /// <param name="type">The type of the mark</param>
         /// <param name="texture">The texture to use as the mark</param>
         /// <param name="pos">The position of the Mark</param>
-        public Mark(Type type, Texture2D texture, Vector2 pos): base(texture, pos) {
+        public Mark(Type type, Texture2D texture, Vector2 pos): base(texture, pos)
+        {
             this.type = type;
+        }
+
+        /// <summary>
+        /// Draws the mark on the screen
+        /// </summary>
+        /// <param name="spriteBatch"></param>
+        public override void draw(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(texture, pos, Color.White);
         }
 
     }
