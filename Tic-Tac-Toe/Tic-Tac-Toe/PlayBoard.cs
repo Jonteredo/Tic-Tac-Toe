@@ -70,7 +70,18 @@ namespace Tic_Tac_Toe
             //TODO: Ta reda på vilken ruta som kordinaterna är i. 
             //TODO: Testa om det går att lägga till och gör det om det går annars returnera falskt. 
             //TODO: Ändra vem som spelar om plceringen var lyckad
+            translateCoords(x, y);
+
             return false;
+        }
+
+        private Vector2 translateCoords(int x, int y) {
+            int x1 = x / ((int) size.X / 3);
+            int y1 = y / ((int)size.Y / 3);
+
+            Console.WriteLine(x1 + "; " + y1);
+
+            return new Vector2();
         }
 
         /// <summary>
@@ -80,7 +91,15 @@ namespace Tic_Tac_Toe
         /// <param name="y">The position in Y, from the top vertecally</param>
         /// <returns>True if there is no mark, False if there is a mark</returns>
         private bool isEmpty(int x, int y) {
-            return false; //TODO kolla så att det är något på positionen x,y. Returera 'true' om det är tom och 'false' om det finns något
+            return isEmpty(new Vector2(x, y));
+        }
+
+        private bool isEmpty(Vector2 vec) {
+            if (marks[vec] == null)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
