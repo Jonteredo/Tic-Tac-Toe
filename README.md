@@ -13,4 +13,4 @@ Kolla under [issues](https://github.com/TEINF12A/Tic-Tac-Toe/issues).
 
 ## Klassdiagram
 Diagram över *"TicTacToeObject"* och *"Marker"* polymorism.
-![Klassdiagram](https://raw.githubusercontent.com/TEINF12A/Tic-Tac-Toe/master/tictactoeobject-marker-uml-polymorphism.png)
+![Klassdiagram](https://github.com/TEINF12A/Tic-Tac-Toe/blob/master/Class%20Diagram.png)
