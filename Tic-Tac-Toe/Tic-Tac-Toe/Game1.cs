@@ -60,8 +60,8 @@ namespace Tic_Tac_Toe
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
             playBoard = new PlayBoard(Content.Load<Texture2D>("playboard"), new Vector2(Window.ClientBounds.Width, Window.ClientBounds.Height - 100));
-            marker = new MarkerPlayer("Gustaf", Mark.Type.CROSS, Content.Load<Texture2D>("x"));
-            marker2 = new MarkerPlayer("Jesper", Mark.Type.CIRCLE, Content.Load<Texture2D>("cirkel"));
+            marker = new MarkerPlayer("Player 1", Mark.Type.CROSS, Content.Load<Texture2D>("x"));
+            marker2 = new MarkerPlayer("Player 2", Mark.Type.CIRCLE, Content.Load<Texture2D>("cirkel"));
 
             playBoard.addMarkers(marker, marker2);
 

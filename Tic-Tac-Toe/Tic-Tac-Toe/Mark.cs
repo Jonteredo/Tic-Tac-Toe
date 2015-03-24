@@ -19,6 +19,7 @@ namespace Tic_Tac_Toe
         }
 
         private Type type;
+        private int ownerId;
 
         /// <summary>
         /// Creates a new Mark object
@@ -26,9 +27,10 @@ namespace Tic_Tac_Toe
         /// <param name="type">The type of the mark</param>
         /// <param name="texture">The texture to use as the mark</param>
         /// <param name="pos">The position of the Mark</param>
-        public Mark(Type type, Texture2D texture, Vector2 pos): base(texture, pos)
+        public Mark(Type type, Texture2D texture, Vector2 pos, int ownerId): base(texture, pos)
         {
             this.type = type;
+            this.ownerId = ownerId;
         }
 
         /// <summary>
@@ -39,6 +41,11 @@ namespace Tic_Tac_Toe
         {
             spriteBatch.Draw(texture, pos, Color.White);
         }
+
+        /// <summary>
+        /// Get the ID of the player who placed this mark
+        /// </summary>
+        public int OwnerId { get { return ownerId;  } }
 
     }
 }

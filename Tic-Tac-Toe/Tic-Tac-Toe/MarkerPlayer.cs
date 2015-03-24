@@ -30,8 +30,7 @@ namespace Tic_Tac_Toe
         public override void update(GameWindow window)
         {
             MouseState mouse = Mouse.GetState();
-            
-            // 
+
             if (mouse.LeftButton.Equals(ButtonState.Pressed) && !isMousePressed && this.PlayerID == Game1.playBoard.ActiveMarker) {
                 isMousePressed = true;
                 tryToMark(mouse.X, mouse.Y);
@@ -40,9 +39,6 @@ namespace Tic_Tac_Toe
             if (mouse.LeftButton.Equals(ButtonState.Released) && isMousePressed) {
                 isMousePressed = false;
             }
-
         }
-
-
     }
 }

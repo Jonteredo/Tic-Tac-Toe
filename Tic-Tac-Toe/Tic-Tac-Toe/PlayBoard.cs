@@ -34,6 +34,11 @@ namespace Tic_Tac_Toe
         {
             markers[0] = marker1;
             markers[1] = marker2;
+
+            // Pass the markers[] array index as ID
+            marker1.PlayerID = 0;
+            marker2.PlayerID = 1;
+
             return this;
         }
 
@@ -43,7 +48,8 @@ namespace Tic_Tac_Toe
         /// <param name="window"></param>
         public override void update(GameWindow window)
         {
-            if (markers[activeMarker] != null) {
+            if (markers[activeMarker] != null)
+            {
                 markers[activeMarker].update(window);
             }
         }
@@ -86,12 +92,58 @@ namespace Tic_Tac_Toe
             Vector2 realCoords = translateToRealCoords((int)coords.X, (int)coords.Y);
 
             // Add a new mark with correct type and coords
-            marks.Add(coords, new Mark(player.Type, player.MarkTexture, realCoords));
+            marks.Add(coords, new Mark(player.Type, player.MarkTexture, realCoords, activeMarker));
 
             // Change active marker to the other player
             activeMarker = (activeMarker == 1) ? 0 : 1;
 
+            // Determine if game is over
+            checkGameStatus();
+
             return true;
+        }
+
+        /// <summary>
+        /// Check if the game is over (lost, won, tie)
+        /// </summary>
+        private void checkGameStatus()
+        {
+            int winnerId = getWinner();
+
+            if (winnerId != -1)
+            {
+                // set winner to "winnerId" variable
+                // reset game
+            }
+            else if (gameIsTie())
+            {
+                // set tie
+                // reset game
+                Console.WriteLine("Game is tie");
+            }
+        }
+
+        /// <summary>
+        /// Check for a winner and return it's ID
+        /// </summary>
+        /// <returns>Array index of the winner</returns>
+        private int getWinner()
+        {
+            // todo: check for three in a row
+            // if winner, return the winner's playerId (mark.OwnerId)
+
+            // No winner
+            return -1;
+        }
+
+        /// <summary>
+        /// Check if game is tie
+        /// </summary>
+        /// <returns></returns>
+        private bool gameIsTie()
+        {
+            // Check if number of marks is equal to the number of available spots
+            return marks.Count == 3 * 3;
         }
 
         /// <summary>
