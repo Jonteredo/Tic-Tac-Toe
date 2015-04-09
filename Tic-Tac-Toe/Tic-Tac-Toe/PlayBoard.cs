@@ -114,6 +114,7 @@ namespace Tic_Tac_Toe
             {
                 // set winner to "winnerId" variable
                 // reset game
+                Console.WriteLine("Winner is " + winnerId);
             }
             else if (gameIsTie())
             {
@@ -132,8 +133,56 @@ namespace Tic_Tac_Toe
             // todo: check for three in a row
             // if winner, return the winner's playerId (mark.OwnerId)
 
-            // No winner
-            return -1;
+            // Vertical check
+            // a x x
+            // a x x
+            // a x x
+
+            int winner = -1;
+
+            for (int x = 0; x < 3;  x++)
+			{
+                int playerId = -1;
+
+                for (int y = 0; y < 3; y++)
+                {
+                    // Stop if there's an empty spot
+                    if (!this.marks.ContainsKey(new Vector2(x, y)))
+                    {
+                        break;
+                    }
+
+                    Mark mark = marks[new Vector2(x, y)];
+                    
+                    // Set player ID
+                    if (playerId == -1)
+                    {
+                        playerId = mark.OwnerId;
+                    }
+                    // If player ID is different from previous spot
+                    else if(playerId != mark.OwnerId)
+                    {
+                        break;
+                    }
+
+                    // If we're done and none of the above have triggered the "break"
+                    if (y == 2) {
+                        winner = mark.OwnerId;
+                    }
+                }
+			}
+
+            // Todo: Horizontal check
+            // a a a
+            // x x x
+            // x x x
+
+            // Todo: Diagonal check
+            // a x x
+            // x a x
+            // x x a
+
+            return winner;
         }
 
         /// <summary>
